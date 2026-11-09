@@ -1,0 +1,143 @@
+/* ===== Tampilan baru mengikuti kolase rancangan + aset dosen ===== */
+
+/* header dari aset */
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;position:relative;z-index:2}
+.plate{position:relative;display:block;border:0;background:none;padding:0;container-type:inline-size;line-height:0;cursor:pointer;color:inherit}
+.plate img{width:100%;display:block;-webkit-user-drag:none;user-select:none}
+.plate>span{position:absolute;line-height:1;font-family:'Baloo 2',sans-serif;white-space:nowrap}
+.profile{width:46%}
+.p-sis{left:39.6%;top:9%;font-size:5.3cqw;font-weight:600;color:#8ec3f5}
+.p-name{left:39.6%;top:24%;font-size:8.6cqw;font-weight:800;color:#fff}
+.p-bar{left:39%;top:59%;width:55.7%;height:11.9%;border-radius:99px;background:#0b2a63;overflow:hidden;box-shadow:inset 0 1px 3px #0007}
+.p-bar i{display:block;height:100%;background:linear-gradient(#a9ee9a,#58c05a);border-radius:99px}
+.p-lv{left:39.6%;top:76%;font-size:5.4cqw;font-weight:700;color:#8ec3f5}
+.currency{width:41%;cursor:default;margin-left:auto}
+.c-star,.c-gem{top:50%;transform:translate(-50%,-50%);font-size:6.2cqw;font-weight:800;color:#fff}
+.c-star{left:31.9%}.c-gem{left:80.9%}
+.gear{width:38px;height:38px;flex:none;border-radius:50%;border:2px solid #ffffff66;background:linear-gradient(#1d4f9c,#0f3b7f);box-shadow:0 3px 0 #0a2a5e;display:grid;place-items:center;cursor:pointer}
+.imgbtn{border:0;background:none;padding:0;width:42px;flex:none;cursor:pointer;line-height:0}
+.imgbtn img{width:100%;display:block}
+.cur{display:flex;gap:6px}
+.gp{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(#244a9a,#142b66);border:2px solid #ffffff55;box-shadow:0 3px 0 #0b1d4c;color:#fff;border-radius:20px;padding:3px 12px;font:800 17px 'Baloo 2',sans-serif}
+
+/* peta */
+.mapwrap .plate{position:absolute}
+.mission{cursor:default}
+.m-bar{left:33.5%;top:76%;width:50.9%;height:11.5%;border-radius:99px;background:#b9d3ee;overflow:hidden}
+.m-bar i,.k-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(#8bf08f,#2fb24a)}
+.m-cnt{left:88%;top:75%;font-size:5.6cqw;font-weight:800;color:#1b3d78}
+.k-bar{left:38.8%;top:67%;width:47.7%;height:17%;border-radius:99px;background:#c5dcf5;overflow:hidden}
+.k-bar i{background:linear-gradient(#5fa8ff,#1f6fe0)}
+.k-bar b{position:absolute;left:6%;top:50%;transform:translateY(-50%);font-size:4.8cqw;color:#fff;text-shadow:0 1px 2px #0a2a6a}
+
+/* navigasi bawah */
+.nav{display:flex;justify-content:space-around;align-items:center;gap:2px;background:#eff6fd;border:2px solid #fff;border-radius:28px;padding:5px 6px;box-shadow:0 8px 20px #0003}
+.nav button{flex:1;border:0;background:transparent;padding:0;border-radius:20px;display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .2s;min-width:0}
+.nav button.on{background:#d3e4fb;transform:translateY(-4px)}
+.nav button.on:has(img[alt="Peta"]){background:transparent}
+.nav img{height:54px;width:auto;max-width:100%;mix-blend-mode:multiply;display:block}
+.mapoff{display:grid;place-items:center;gap:1px;height:54px}
+.mapoff b{font:700 14px 'Baloo 2',sans-serif;color:#3f5f93}
+
+/* pita judul */
+.ribbon{display:block;width:max-content;max-width:100%;margin:0 auto 8px;padding:6px 46px;color:#fff;font:800 28px 'Baloo 2',sans-serif;text-align:center;line-height:1.15;text-shadow:0 2px 0 #0004;clip-path:polygon(0 0,100% 0,95% 50%,100% 100%,0 100%,5% 50%);filter:drop-shadow(0 4px 0 #0003)}
+.ribbon.wood{background:linear-gradient(#d18a4a,#a35f27)}
+.ribbon.blue{background:linear-gradient(#3b8ff0,#1f5fc4);font-size:19px;padding:5px 38px}
+.ribbon.orange{background:linear-gradient(#fbb54d,#e8782a);font-size:30px}
+
+/* detail level */
+.detailbody{display:flex;flex-direction:column;gap:2px}
+.card.goal{font-size:17px;line-height:1.2;margin-top:6px}
+.bstars{display:flex;justify-content:center;gap:8px;margin:8px 0}
+.chips{display:flex;justify-content:space-around;background:#e9f1fc;border-radius:14px;padding:6px;font-weight:700;font-size:16px}
+.detailhero{display:flex;justify-content:center;margin:2px 0 -4px;filter:drop-shadow(0 8px 4px #0003)}
+
+/* eksplorasi */
+.exhead,.qhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;position:relative;z-index:2}
+.pausebtn{width:42px;height:42px;flex:none;border-radius:50%;border:3px solid #fff;background:linear-gradient(#3b8ff0,#1b4fb0);color:#fff;font-size:15px;cursor:pointer;box-shadow:0 3px 0 #123c8a}
+.exhead .gp:nth-child(2){margin-left:auto}
+.collectcard{padding:8px 14px;line-height:1.15}
+.collectcard small{display:block;font-size:13px;margin-top:2px}
+.crow{display:flex;align-items:center;gap:10px;margin:4px 0}
+.crow span{opacity:.35;filter:grayscale(.7);transition:.3s;line-height:0}
+.crow span.got{opacity:1;filter:none;transform:scale(1.12)}
+.crow em{margin-left:auto;font:800 22px 'Baloo 2';font-style:normal}
+.exbg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.ctrl{bottom:14px;padding:0 20px}
+.ctrl button{width:68px;height:68px;border:5px solid #c4e0ff;background:radial-gradient(circle at 35% 30%,#6db4ff,#1f5fc4);display:grid;place-items:center;box-shadow:0 5px 0 #123c8a,0 8px 12px #0004}
+.ctrl button:active{transform:translateY(3px)}
+.col{animation:bob 1.6s ease-in-out infinite}.col.got{animation:none}
+
+/* soal */
+.qprog{flex:1;height:16px;border-radius:99px;background:#0b2a6366;overflow:hidden;border:2px solid #ffffffbb}
+.qprog i{display:block;height:100%;border-radius:99px;background:linear-gradient(#ffd25a,#f59a1f);transition:width .4s}
+.qnum{background:#fff;border-radius:14px;padding:1px 10px;color:var(--navy);font-size:17px}
+.hearts{text-align:right;margin:-2px 4px 4px;position:relative;z-index:2;font-size:18px;filter:drop-shadow(0 2px 0 #0003)}
+.qcard{background:#fff;border:2px solid #fff;border-radius:24px;padding:14px;box-shadow:0 6px 0 #1f4aa826,0 10px 18px #0002}
+.qtext{font-size:20px;line-height:1.2;display:block}
+.qpic{margin-top:10px;border-radius:18px;background:linear-gradient(#bfe6ff,#e4f6cf);padding:8px;text-align:center;line-height:1.1}
+.opt{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:18px;font-size:19px;border-bottom:5px solid #0002}
+.o0{background:linear-gradient(#ffe38f,#ffcf55)}.o1{background:linear-gradient(#d9e8ff,#bcd6fb)}.o2{background:linear-gradient(#dff7d0,#c4eeae)}.o3{background:linear-gradient(#ffe0ea,#ffc6d8)}
+.oi{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#fff9;font-weight:800;flex:none}
+.ot{flex:1}
+.ck{display:none;width:30px;height:30px;border-radius:50%;background:#fff;color:#1f9d36;place-items:center;font-size:16px}
+.opt.ok{background:linear-gradient(#3b8ff0,#1f5fc4);color:#fff;border-bottom-color:#123c8a}
+.opt.ok .ck{display:grid}
+.opt.no{background:linear-gradient(#ffb3bd,#ef7c8c);color:#fff}
+.opt.sel{outline:3px solid #2f7fe0}
+.piclist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.pic{position:relative;background:#fff;border:3px solid #cfe0ff;border-radius:18px;padding:14px 0 18px;font-size:50px;line-height:1.1;cursor:pointer;box-shadow:0 4px 0 #0002;animation:pop .35s ease both}
+.pic.sel{border-color:#2f7fe0;background:#e6f1ff}
+.pic.ok{border-color:#1f9d36;background:#e2f8dc}
+.cb{position:absolute;left:8px;bottom:8px;width:24px;height:24px;border-radius:7px;border:2px solid #2f7fe0;background:#fff;color:#fff;font:800 15px/20px 'Baloo 2';text-align:center}
+.pic.sel .cb{background:#2f7fe0}.pic.ok .cb{background:#1f9d36;border-color:#1f9d36}
+.btn.small{font-size:16px;padding:6px}
+
+/* hasil */
+.bigstars{display:flex;justify-content:center;align-items:flex-end;gap:2px;margin:6px 0 -10px;position:relative;z-index:2;filter:drop-shadow(0 4px 0 #0003)}
+.bigstars svg:nth-child(1){transform:rotate(-12deg)}.bigstars svg:nth-child(3){transform:rotate(12deg)}
+.card.res{padding:10px 14px}
+.resgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;text-align:left;font-size:16px}
+.resgrid div,.ansrow,.rrow{display:flex;justify-content:space-between;gap:6px;font-weight:600}
+.resgrid b,.ansrow b{font-weight:800}
+.ansrow{margin-top:8px;background:#e9f6ee;border-radius:12px;padding:6px 10px;font-size:17px;text-align:left}
+
+/* aturan & skor */
+.rules h3{margin:0 0 6px;color:#2a8a4a}
+.rrow{padding:6px 0;border-bottom:1px solid #e1e8f5;font-size:14px;text-align:left}
+.rrow b{text-align:right;max-width:55%;font-size:13px;color:#335}
+
+/* ===== Pulau 1: gameplay, soal, hasil ===== */
+.stage{touch-action:none;user-select:none;-webkit-user-select:none}
+.ctrl{display:flex;justify-content:space-between;align-items:center;padding:0 16px}
+.ctrlpad{display:flex;gap:14px}
+.ctrl button{touch-action:none;-webkit-tap-highlight-color:transparent}
+.ob{line-height:1}
+.col{z-index:2}
+.pl{z-index:3}
+.hearts{display:flex;justify-content:flex-end;gap:4px}
+.heart{transition:transform .2s}
+.heart.lost{animation:heartlost .5s ease}
+@keyframes heartlost{0%{transform:scale(1.4)}60%{transform:scale(.8) rotate(-12deg)}100%{transform:scale(1)}}
+.qpic{padding:6px}
+.qpic svg{max-width:100%;height:auto;border-radius:12px}
+.qopts{margin-top:8px}
+.opt{width:100%;text-align:left;cursor:pointer;min-height:54px}
+.opt.ok{background:linear-gradient(#4fd16a,#26a043);color:#fff;border-bottom-color:#17702b}
+.opt.no{background:linear-gradient(#ff8a98,#e5384f);color:#fff;border-bottom-color:#a5121f;animation:shake .4s}
+.opt.dim{opacity:.55}
+.opt.no .ck,.opt.ok .ck{display:grid}
+.opt.no .ck{color:#e5384f}
+.msg.good{background:#e2f8dc;color:#17702b}
+.msg.bad{background:#ffe4e8;color:#a5121f}
+.starpop{display:inline-block;animation:starin .6s cubic-bezier(.3,1.6,.5,1) both}
+.starpop.earned svg{animation:starglow 1.2s ease .9s 2}
+@keyframes starin{from{transform:scale(0) rotate(-120deg)}to{transform:scale(1) rotate(0)}}
+@keyframes starglow{50%{transform:scale(1.18)}}
+.bigstars svg:nth-child(1){transform:none}.bigstars svg:nth-child(3){transform:none}
+.bigstars .starpop:nth-child(1){margin-right:-4px}.bigstars .starpop:nth-child(3){margin-left:-4px}
+.resnote{margin:8px 2px 2px;font-size:15px;font-weight:700;color:#a5121f}
+.resnote.ok{color:#17702b}
+.maptoast{position:fixed;left:50%;bottom:120px;transform:translateX(-50%);z-index:50;max-width:80%;background:#0b2a63ee;color:#fff;border:3px solid #fff;border-radius:16px;padding:8px 14px;font:700 15px 'Baloo 2';text-align:center;box-shadow:0 6px 14px #0006;pointer-events:none}
+@media (max-height:640px){.qpic svg{max-height:110px}}
+@media (min-width:431px){#app{border-radius:24px;box-shadow:0 10px 40px #0007;margin:0 auto}}
